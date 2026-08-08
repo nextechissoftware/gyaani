@@ -43,7 +43,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary">
                 <img src="img/logo.jpeg" alt="logo" height="50" width="55">
                 <span style="font-weight:700;"><span style="color:#9B3FAF;">G</span><span style="color:#F4C20D;">y</span><span style="color:#E53935;">a</span><span style="color:#1976D2;">a</span><span style="color:#29B6F6;">n</span><span style="color:#F9A825;">a</span></span>
@@ -55,13 +55,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="team.html" class="nav-item nav-link">Our Team</a>
-                <!-- <a href="testimonial.html" class="nav-item nav-link">Testimonial</a> -->
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="about.php" class="nav-item nav-link">About</a>
+                <a href="courses.php" class="nav-item nav-link">Courses</a>
+                <a href="team.php" class="nav-item nav-link">Our Team</a>
+                <!-- <a href="testimonial.php" class="nav-item nav-link">Testimonial</a> -->
+                <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+                <a href="contact.php" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -133,7 +133,6 @@
     </div>
     <!-- Testimonial End -->
         
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -142,11 +141,10 @@
                 <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Links</h4>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="academics.html">Academics</a>
-                    <a class="btn btn-link" href="gallery.html">Gallery</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="gallery.php">Gallery</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                 </div>
 
                 <!-- Contact -->
@@ -155,17 +153,19 @@
 
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-3"></i>
-                        Your School Address
+                        Kahli, Gausganj, Hardoi, UP (241305)
                     </p>
 
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
-                        +91 XXXXX XXXXX
+                        +91 7522852280
                     </p>
 
-                    <p class="mb-2">
+                    <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
-                        info@gyaanaschool.com
+                        <span style="overflow-wrap: anywhere;">
+                            principal@gyaanainternationalschool.com
+                        </span>
                     </p>
 
                     <div class="d-flex pt-2">
@@ -197,10 +197,6 @@
                         Join Gyaana International School and provide your child
                         with a strong foundation for a bright future.
                     </p>
-
-                    <a href="contact.html" class="btn btn-primary mt-2 px-4">
-                        Apply Now
-                    </a>
                 </div>
 
             </div>
@@ -229,7 +225,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

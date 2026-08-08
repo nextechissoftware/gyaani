@@ -43,7 +43,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary">
                 <img src="img/logo.jpeg" alt="logo" height="50" width="55">
                 <span style="font-weight:700;"><span style="color:#9B3FAF;">G</span><span style="color:#F4C20D;">y</span><span style="color:#E53935;">a</span><span style="color:#1976D2;">a</span><span style="color:#29B6F6;">n</span><span style="color:#F9A825;">a</span></span>
@@ -55,13 +55,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="team.html" class="nav-item nav-link active">Our Team</a>
-                <!-- <a href="testimonial.html" class="nav-item nav-link">Testimonial</a> -->
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="index.php" class="nav-item nav-link">Home</a>
+                <a href="about.php" class="nav-item nav-link active">About</a>
+                <!-- <a href="courses.php" class="nav-item nav-link">Courses</a> -->
+                <a href="team.php" class="nav-item nav-link">Our Team</a>
+                <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <a href="mandatory-public-disclosure.php" class="nav-item nav-link">Mandatory Public Disclosure</a>
             </div>
         </div>
     </nav>
@@ -73,12 +73,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Our Team</h1>
+                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                             <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Team</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
                         </ol>
                     </nav>
                 </div>
@@ -86,6 +86,152 @@
         </div>
     </div>
     <!-- Header End -->
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
+                            <h5 class="mb-3">Experienced Faculty</h5>
+                            <p>Dedicated and qualified teachers committed to providing quality education and nurturing every student's potential.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-school text-primary mb-4"></i>
+                            <h5 class="mb-3">Modern Campus</h5>
+                            <p>A safe, vibrant, and well-equipped learning environment designed to inspire creativity and academic excellence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
+                            <h5 class="mb-3">Sports & Activities</h5>
+                            <p>Encouraging physical fitness, teamwork, leadership, and creativity through sports and extracurricular activities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item text-center pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+                            <h5 class="mb-3">Smart Learning</h5>
+                            <p>Interactive classrooms and a rich library that make learning engaging, innovative, and student-centered.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100"
+                        src="img/about.jpg"
+                        alt="Gyaana International School"
+                        style="object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+
+                <h6 class="section-title bg-white text-start text-primary pe-3">
+                    About Us
+                </h6>
+
+                <h1 class="mb-4">
+                    Welcome to Gyaana International School
+                </h1>
+
+                <p class="mb-4">
+                    At Gyaana International School, we believe that education is not
+                    limited to textbooks and classrooms. Our aim is to create a
+                    nurturing and inspiring environment where every child is
+                    encouraged to learn, explore, think creatively, and develop
+                    confidence.
+                </p>
+
+                <p class="mb-4">
+                    With dedicated teachers, modern learning practices, and a strong
+                    emphasis on values and character development, we strive to provide
+                    our students with a balanced education that prepares them for
+                    academic success as well as the challenges of the future.
+                </p>
+
+                <!-- Key Features -->
+                <div class="row gy-2 gx-4 mb-4">
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Experienced & Dedicated Faculty
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Student-Centered Learning
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Academic Excellence
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Strong Moral Values
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Holistic Child Development
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p class="mb-0">
+                            <i class="fa fa-arrow-right text-primary me-2"></i>
+                            Safe & Nurturing Environment
+                        </p>
+                    </div>
+
+                </div>
+
+                <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
 
     <!-- Team Start -->
@@ -168,78 +314,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -254,11 +328,10 @@
                 <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Links</h4>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="academics.html">Academics</a>
-                    <a class="btn btn-link" href="gallery.html">Gallery</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="gallery.php">Gallery</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                 </div>
 
                 <!-- Contact -->
@@ -267,17 +340,19 @@
 
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-3"></i>
-                        Your School Address
+                        Kahli, Gausganj, Hardoi, UP (241305)
                     </p>
 
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
-                        +91 XXXXX XXXXX
+                        +91 7522852280
                     </p>
 
-                    <p class="mb-2">
+                    <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
-                        info@gyaanaschool.com
+                        <span style="overflow-wrap: anywhere;">
+                            principal@gyaanainternationalschool.com
+                        </span>
                     </p>
 
                     <div class="d-flex pt-2">
@@ -309,10 +384,6 @@
                         Join Gyaana International School and provide your child
                         with a strong foundation for a bright future.
                     </p>
-
-                    <a href="contact.html" class="btn btn-primary mt-2 px-4">
-                        Apply Now
-                    </a>
                 </div>
 
             </div>

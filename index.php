@@ -43,7 +43,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h2 class="m-0 text-primary">
                 <img src="img/logo.jpeg" alt="logo" height="50" width="55">
                 <span style="font-weight:700;"><span style="color:#9B3FAF;">G</span><span style="color:#F4C20D;">y</span><span style="color:#E53935;">a</span><span style="color:#1976D2;">a</span><span style="color:#29B6F6;">n</span><span style="color:#F9A825;">a</span></span>
@@ -55,13 +55,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="team.html" class="nav-item nav-link">Our Team</a>
-                <!-- <a href="testimonial.html" class="nav-item nav-link">Testimonial</a> -->
-                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="index.php" class="nav-item nav-link active">Home</a>
+                <a href="about.php" class="nav-item nav-link">About</a>
+                <!-- <a href="courses.php" class="nav-item nav-link">Courses</a> -->
+                <a href="team.php" class="nav-item nav-link">Our Team</a>
+                <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+                <a href="contact.php" class="nav-item nav-link">Contact</a>
+                <a href="mandatory-public-disclosure.php" class="nav-item nav-link">Mandatory Public Disclosure</a>
             </div>
         </div>
     </nav>
@@ -181,7 +181,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Director</h6>
-                    <h1 class="mb-4">Welcome to Gyaana International School</h1>
+                    <h1 class="mb-4">Mr. Shyam Ji Singh</h1>
                     <p class="mb-4">At Gyaana International School, we believe that true education is a collaborative journey where students, 
                         parents, teachers, and management work together with a shared vision. <br/>
                         Our Gyaanians are at the heart of everything we do, and their success is our greatest achievement.
@@ -220,17 +220,99 @@
                                 <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Holistic Personality Development</p>
                             </div>
                         </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">About Us</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">About Us</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Director</h6>
+                    <h1 class="mb-4">Mr. Pratyush Kumar </h1>
+                        <p class="mb-4">
+                            At Gyaana International School, we are committed to creating an educational environment where every child is encouraged to discover their potential, develop confidence, and become a responsible and capable individual. <br/>
+
+                        
+                        Our students are the foundation of our vision, and we believe that education should go beyond textbooks and examinations. Through a balanced approach to academics, co-curricular activities, discipline, and values, we strive to prepare our Gyaanians to face the challenges of tomorrow with confidence and determination. <br/>
+
+                        We deeply value the partnership of parents in the educational journey of every child. Their trust, involvement, and continuous support strengthen our efforts to provide a safe, positive, and inspiring atmosphere where students can learn freely, express themselves, and grow into well-rounded personalities. <br/>
+
+                        Our teachers are the driving force behind this vision. Their dedication, creativity, and commitment enable us to introduce meaningful learning experiences while ensuring that every student receives the guidance and encouragement they need to succeed. <br/>
+
+                        As we look towards the future, our aim is to continuously evolve with changing educational needs while preserving the timeless values of honesty, respect, discipline, compassion, and responsibility. We remain dedicated to providing our students with the knowledge, skills, and character required to make a meaningful contribution to society. <br/>
+
+                        Together, with the collective efforts of our students, parents, teachers, and management, we look forward to building a brighter future and creating a lasting legacy of excellence at Gyaana International School.
+                        </p>
+                        <div class="row gy-2 gx-4 mb-4">
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Future-Ready Education
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Innovation in Learning
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Strong Moral Values
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Leadership & Confidence
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Creative & Critical Thinking
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p class="mb-0">
+                                    <i class="fa fa-arrow-right text-primary me-2"></i>
+                                    Responsible Global Citizens
+                                </p>
+                            </div>
+
+                        </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">About Us</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/director2.jpeg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/principal.jpeg" alt="" style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Principal</h6>
-                    <h1 class="mb-4">Nurturing Young Minds with Care and Excellence</h1>
+                    <h1 class="mb-4">Mr. Gaurav Kumar Agarwal</h1>
                         <p class="mb-4">
                             At Gyaana International School, our goal is to provide every student with a safe, supportive, and inspiring learning environment. We believe that every child is unique and has the potential to achieve excellence through dedication, discipline, and the right guidance.
                             <br><br>
@@ -261,12 +343,7 @@
                                 <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Holistic Development</p>
                             </div>
                         </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.html">About Us</a>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/principal.jpeg" alt="" style="object-fit: cover;">
-                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">About Us</a>
                 </div>
             </div>
         </div>
@@ -576,11 +653,10 @@
                 <!-- Quick Links -->
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Quick Links</h4>
-                    <a class="btn btn-link" href="index.html">Home</a>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="academics.html">Academics</a>
-                    <a class="btn btn-link" href="gallery.html">Gallery</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="index.php">Home</a>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="gallery.php">Gallery</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
                 </div>
 
                 <!-- Contact -->
@@ -589,17 +665,19 @@
 
                     <p class="mb-2">
                         <i class="fa fa-map-marker-alt me-3"></i>
-                        Your School Address
+                        Kahli, Gausganj, Hardoi, UP (241305)
                     </p>
 
                     <p class="mb-2">
                         <i class="fa fa-phone-alt me-3"></i>
-                        +91 XXXXX XXXXX
+                        +91 7522852280
                     </p>
 
-                    <p class="mb-2">
+                    <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
-                        info@gyaanaschool.com
+                        <span style="overflow-wrap: anywhere;">
+                            principal@gyaanainternationalschool.com
+                        </span>
                     </p>
 
                     <div class="d-flex pt-2">
@@ -631,10 +709,6 @@
                         Join Gyaana International School and provide your child
                         with a strong foundation for a bright future.
                     </p>
-
-                    <a href="contact.html" class="btn btn-primary mt-2 px-4">
-                        Apply Now
-                    </a>
                 </div>
 
             </div>
