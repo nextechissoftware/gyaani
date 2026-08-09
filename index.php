@@ -125,7 +125,7 @@
             <div class="row g-4">
                 
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-chalkboard-teacher text-primary mb-4"></i>
                             <h5 class="mb-3">Experienced Faculty</h5>
@@ -135,7 +135,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-school text-primary mb-4"></i>
                             <h5 class="mb-3">Modern Campus</h5>
@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-futbol text-primary mb-4"></i>
                             <h5 class="mb-3">Sports & Activities</h5>
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
+                    <div class="service-item text-center pt-3 h-100">
                         <div class="p-4">
                             <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
                             <h5 class="mb-3">Smart Learning</h5>
@@ -522,7 +522,7 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-light h-100">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="img/team-1.jpg" alt="">
                         </div>
@@ -534,13 +534,13 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">CHAUDHARY QAYAM RAZA</h5>
+                            <small>Coordinator</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-light h-100">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="img/team-2.jpg" alt="">
                         </div>
@@ -552,13 +552,13 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">KAUSHAL KISHOR SHARMA</h5>
+                            <small>Examination Incharge</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-light h-100">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="img/team-3.jpg" alt="">
                         </div>
@@ -570,13 +570,13 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Yashvardhini Pandey</h5>
+                            <small>Assistant Teacher</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
+                    <div class="team-item bg-light h-100">
                         <div class="overflow-hidden">
                             <img class="img-fluid" src="img/team-4.jpg" alt="">
                         </div>
@@ -588,8 +588,8 @@
                             </div>
                         </div>
                         <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                            <h5 class="mb-0">Purnima sharma</h5>
+                            <small>Assistant Teacher</small>
                         </div>
                     </div>
                 </div>
