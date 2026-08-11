@@ -96,6 +96,29 @@
                 <h1 class="mb-5">Expert Instructors</h1>
             </div>
             <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light h-100">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-0.jpeg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
+                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Dhirendra kumar</h5>
+                            <small>Assistant Manager</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>M.A. (sociology) B.Ed.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item bg-light h-100">
                         <div class="overflow-hidden">
@@ -111,6 +134,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">CHAUDHARY QAYAM RAZA</h5>
                             <small>Coordinator</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>M.SC.,B.SC.,D.EL.ED,CTET
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,6 +157,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">KAUSHAL KISHOR SHARMA</h5>
                             <small>Examination Incharge</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>B.A, B.ED
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -147,6 +180,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">Yashvardhini Pandey</h5>
                             <small>Assistant Teacher</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>M.Sc. D.El.Ed. CTET 
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,6 +203,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">Purnima sharma</h5>
                             <small>Assistant Teacher</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>B.s.c
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,6 +227,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">Nayab fatima</h5>
                             <small>Assistant Teacher</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>BSc (ZBC), MSc (zoology) 
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,6 +250,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">Anupam Singh Yadav </h5>
                             <small>Accountant</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>B.Sc(Agri.) Hons., M.Sc(Agronomy) 
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -220,6 +273,11 @@
                         <div class="text-center p-4">
                             <h5 class="mb-0">SHIVANI PATEL </h5>
                             <small>Assistant Teacher</small>
+                            <div class="mt-2">
+                                <span class="badge rounded-pill" style="background:#e1f5ee; color:#0f95a1; font-weight:500; padding:6px 12px; font-size:12px;">
+                                    <i class="fas fa-graduation-cap me-1"></i>B.SC, M.SC, D.EL.ED, UPTET, CTET
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -259,6 +317,8 @@
                     <a class="btn btn-link" href="about.php">About Us</a>
                     <a class="btn btn-link" href="gallery.php">Gallery</a>
                     <a class="btn btn-link" href="contact.php">Contact Us</a>
+                    <a class="btn btn-link" href="privacy_policy.php">Privacy Policy</a>
+                    <a class="btn btn-link" href="disclaimer.php">Disclaimer</a>
                 </div>
 
                 <!-- Contact -->

@@ -432,3 +432,166 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+/* privacy policy */
+
+  .pp-wrap{
+    font-family:'Poppins', sans-serif;
+    color:var(--text);
+    background:#ffffff;
+  }
+
+  /* ---- page title banner (matches template's inner-page header style) ---- */
+  .pp-banner{
+    background:
+      linear-gradient(120deg, rgba(23,182,196,.92), rgba(15,60,80,.88)),
+      url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=60') center/cover;
+    padding:70px 20px;
+    text-align:center;
+  }
+  .pp-banner h1{
+    color:#fff;
+    font-size:2.4rem;
+    font-weight:800;
+    letter-spacing:.5px;
+    margin:0 0 10px;
+  }
+  .pp-banner .pp-crumb{
+    color:#e6f9fb;
+    font-size:.95rem;
+  }
+  .pp-banner .pp-crumb span{ color:#cdeff2; }
+
+  /* ---- section eyebrow / underline title, same as "TESTIMONIAL" block ---- */
+  .pp-section{ padding:60px 20px; }
+  .pp-section.alt{ background:var(--bg-soft); }
+
+  .pp-eyebrow{
+    text-align:center;
+    color:var(--teal);
+    font-weight:700;
+    font-size:.8rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+  }
+  .pp-eyebrow::before,.pp-eyebrow::after{
+    content:"";
+    display:inline-block;
+    width:28px;height:2px;
+    background:var(--teal);
+    margin:0 10px 4px;
+  }
+  .pp-title{
+    text-align:center;
+    color:var(--navy);
+    font-size:1.9rem;
+    font-weight:800;
+    margin:0 0 40px;
+  }
+
+  .pp-inner{ max-width:900px; margin:0 auto; }
+
+  /* ---- intro card ---- */
+  .pp-intro{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-left:4px solid var(--teal);
+    border-radius:10px;
+    padding:26px 30px;
+    box-shadow:0 6px 20px rgba(23,182,196,.06);
+    margin-bottom:10px;
+  }
+  .pp-intro p{ margin:0 0 12px; line-height:1.75; }
+  .pp-intro p:last-child{ margin-bottom:0; }
+  .pp-intro strong{ color:var(--navy); }
+
+  /* ---- numbered policy blocks ---- */
+  .pp-block{
+    display:flex;
+    gap:22px;
+    padding:26px 0;
+    border-bottom:1px solid var(--border);
+  }
+  .pp-block:last-child{ border-bottom:none; }
+
+  .pp-num{
+    flex:0 0 46px;
+    height:46px;
+    border-radius:50%;
+    background:rgba(23,182,196,.1);
+    color:var(--teal-dark);
+    font-weight:800;
+    font-size:1.05rem;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .pp-block-title{
+    color:var(--navy);
+    font-size:1.15rem;
+    font-weight:700;
+    margin:2px 0 10px;
+  }
+  .pp-block-body p{ margin:0 0 12px; line-height:1.75; }
+  .pp-block-body p:last-child{ margin-bottom:0; }
+
+  .pp-block-body ul{
+    margin:6px 0 14px;
+    padding-left:0;
+    list-style:none;
+  }
+  .pp-block-body ul li{
+    position:relative;
+    padding-left:22px;
+    line-height:1.7;
+    margin-bottom:6px;
+  }
+  .pp-block-body ul li::before{
+    content:"";
+    position:absolute;
+    left:0; top:10px;
+    width:8px;height:8px;
+    border-radius:2px;
+    background:var(--teal);
+    transform:rotate(45deg);
+  }
+
+  .pp-subhead{
+    color:var(--teal-dark);
+    font-weight:700;
+    font-size:.95rem;
+    margin:14px 0 6px;
+  }
+
+  /* ---- contact / grievance highlight card ---- */
+  .pp-contact{
+    background:linear-gradient(135deg, var(--navy), #14495a);
+    color:#eaf7f9;
+    border-radius:12px;
+    padding:34px 32px;
+    margin-top:10px;
+  }
+  .pp-contact h3{
+    color:#fff;
+    font-size:1.3rem;
+    font-weight:800;
+    margin:0 0 14px;
+  }
+  .pp-contact p{ margin:0 0 8px; line-height:1.7; color:#dff3f5; }
+  .pp-contact a{ color:#8fe9f0; text-decoration:none; font-weight:600; }
+  .pp-contact a:hover{ text-decoration:underline; }
+  .pp-contact .pp-tag{ color:#8fe9f0; font-weight:700; }
+
+  .pp-updated{
+    text-align:center;
+    font-size:.85rem;
+    color:#8a99a8;
+    margin-top:36px;
+  }
+
+  @media(max-width:640px){
+    .pp-banner h1{ font-size:1.8rem; }
+    .pp-title{ font-size:1.5rem; }
+    .pp-block{ flex-direction:column; gap:10px; }
+    .pp-contact{ padding:26px 20px; }
+  }

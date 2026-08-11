@@ -298,6 +298,8 @@
                     <a class="btn btn-link" href="about.php">About Us</a>
                     <a class="btn btn-link" href="gallery.php">Gallery</a>
                     <a class="btn btn-link" href="contact.php">Contact Us</a>
+                    <a class="btn btn-link" href="privacy_policy.php">Privacy Policy</a>
+                    <a class="btn btn-link" href="disclaimer.php">Disclaimer</a>
                 </div>
 
                 <!-- Contact -->
