@@ -207,8 +207,8 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Name of the School</td><td>Gyaana International School</td></tr>
-      <tr><td>2</td><td>Affiliation No. (If Applicable)</td><td><span>2134561</span></td></tr>
-      <tr><td>3</td><td>School Code (If Applicable)</td><td><span>72403</span></td></tr>
+      <tr><td>2</td><td>Affiliation No. (If Applicable)</td><td><span>-------</span></td></tr>
+      <tr><td>3</td><td>School Code (If Applicable)</td><td><span>------</span></td></tr>
       <tr><td>4</td><td>Complete Address with Pin Code</td><td>Kahli, Gausganj, Hardoi, UTTAR PRADESH - 273202</td></tr>
       <tr><td>5</td><td>Principal Name &amp; Qualification</td><td>Mr. Gaurav Kumar Agarwal</td></tr>
       <tr><td>6</td><td>School Email ID</td><td>principal@gyaanainternationalschool.com</td></tr>
@@ -362,7 +362,7 @@
       <tr><td>6</td><td>No. of Girls Toilets</td><td>08</td></tr>
       <tr><td>7</td><td>No. of Boys Toilets</td><td>08</td></tr>
       <!-- <tr><td>8</td><td>No. of CWSN Toilets</td><td>02</td></tr> -->
-      <tr><td>9</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><a href="https://youtu.be/DVeLHMyhV2E?si=olmdVu_JMLSjXjZ6">View Video</a></td></tr>
+      <tr><td>9</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><a href="#">View Video</a></td></tr>
     </tbody>
   </table>
 
