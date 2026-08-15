@@ -7,9 +7,9 @@
  * to DB_USER = 'root', DB_PASS = '' aam taur par chalta hai.
  */
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'gyaana'); 
-define('DB_USER', 'root');    
-define('DB_PASS', '');  
+define('DB_NAME', 'u221387206_gyaana'); 
+define('DB_USER', 'u221387206_gyaana');    
+define('DB_PASS', 'Mili@88877');  
 
 // Site base path (jaha ye admin folder site root ke andar hai)
 // Example: agar admin panel https://gyaanainternationalschool.com/admin/ pe hai
