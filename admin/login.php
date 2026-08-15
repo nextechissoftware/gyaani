@@ -12,7 +12,7 @@ $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
+    $password = $_POST['password'] ?? '' ;
 
     if ($username === '' || $password === '') {
         $error = 'Username aur password dono bharo.';
