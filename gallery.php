@@ -10,11 +10,21 @@ $totalPages = max(1, (int)ceil($total / $perPage));
 $page = min($page, $totalPages);
 $offset = ($page - 1) * $perPage;
 
-$stmt = $pdo->prepare("SELECT id, image_path, caption FROM gallery_photos ORDER BY id DESC LIMIT :limit OFFSET :offset");
+$stmt = $pdo->prepare("
+    SELECT p.id, p.image_path, p.caption,
+           e.title AS event_title, e.event_date,
+           (SELECT COUNT(*) FROM gallery_photos p2 WHERE p2.event_id = p.event_id) AS event_photo_count
+    FROM gallery_photos p
+    LEFT JOIN gallery_events e ON e.id = p.event_id
+    ORDER BY p.id DESC
+    LIMIT :limit OFFSET :offset
+");
 $stmt->bindValue(':limit', $perPage, PDO::PARAM_INT);
 $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
 $stmt->execute();
 $photos = $stmt->fetchAll();
+
+$eventCount = (int)$pdo->query("SELECT COUNT(*) FROM gallery_events")->fetchColumn();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,178 +47,272 @@ $photos = $stmt->fetchAll();
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .gallery-item {
+        :root {
+            --gallery-purple: #6655f6;
+            --gallery-blue: #243b88;
+            --gallery-cyan: #06bbcc;
+            --gallery-ink: #17203a;
+            --gallery-soft: #f6f7fc;
+        }
+
+        body { background: var(--gallery-soft); }
+
+        /* Premium gallery hero */
+        .gallery-hero {
             position: relative;
-            overflow: hidden;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
-            height: 280px;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform .35s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
+            min-height: 330px;
             display: flex;
             align-items: center;
+            overflow: visible;
+            background:
+                linear-gradient(110deg, rgba(10,48,101,.88), rgba(62,33,130,.78)),
+                url('img/carousel-1.jpg') center/cover no-repeat;
+            margin-bottom: 115px;
+        }
+        .gallery-hero::after {
+            content: '';
+            position: absolute;
+            inset: auto 0 0;
+            height: 90px;
+            background: linear-gradient(to bottom, transparent, rgba(246,247,252,1));
+        }
+        .gallery-hero-content { position: relative; z-index: 2; }
+        .gallery-kicker {
+            display: inline-block;
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffd43b;
+            margin-bottom: 4px;
+        }
+        .gallery-hero h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            font-weight: 800;
+            line-height: 1;
+            margin: 0 0 12px;
+            text-shadow: 0 8px 25px rgba(0,0,0,.2);
+        }
+        .gallery-hero p {
+            font-size: 17px;
+            margin: 0;
+            color: rgba(255,255,255,.9);
+        }
+        .gallery-hero-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             justify-content: center;
-            background: rgba(0, 0, 0, .28);
-            opacity: 0;
-            transition: opacity .25s ease;
+            margin-top: 18px;
+            color: #fff;
         }
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        .gallery-hero-line::before,
+        .gallery-hero-line::after {
+            content: '';
+            width: 38px;
+            height: 2px;
+            background: rgba(255,255,255,.8);
         }
-        .gallery-overlay i {
+
+        /* Floating stats */
+        .gallery-stats {
+            position: absolute;
+            z-index: 5;
+            left: 50%;
+            bottom: -43px;
+            transform: translateX(-50%);
+            width: min(790px, calc(100% - 30px));
+            background: rgba(255,255,255,.97);
+            border-radius: 18px;
+            box-shadow: 0 15px 45px rgba(28,38,72,.14);
+            padding: 22px 26px;
+        }
+        .gallery-stat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 4px 12px;
+        }
+        .gallery-stat-icon {
             width: 48px;
             height: 48px;
+            flex: 0 0 48px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #06BBCC;
+            background: #f0edff;
+            color: var(--gallery-purple);
+            font-size: 20px;
+        }
+        .gallery-stat strong {
+            display: block;
+            color: var(--gallery-ink);
+            font-family: 'Nunito', sans-serif;
+            font-size: 23px;
+            line-height: 1.05;
+        }
+        .gallery-stat span {
+            display: block;
+            color: #69718a;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* Gallery intro */
+        .gallery-section { padding: 0 0 70px; }
+        .gallery-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 34px;
+        }
+        .gallery-heading .eyebrow {
+            color: var(--gallery-purple);
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+        .gallery-heading h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--gallery-ink);
+            font-weight: 800;
+            margin: 7px 0 8px;
+        }
+        .gallery-heading p { color: #737b91; margin: 0; }
+
+        /* Image cards */
+        .gallery-card {
+            position: relative;
+            height: 285px;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 8px 26px rgba(28,38,72,.10);
+            display: block;
+            text-decoration: none;
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .55s cubic-bezier(.2,.7,.2,1);
+        }
+        .gallery-card::after {
+            content: '';
+            position: absolute;
+            inset: 30% 0 0;
+            background: linear-gradient(to bottom, transparent, rgba(8,13,35,.86));
+            pointer-events: none;
+        }
+        .gallery-card:hover img { transform: scale(1.07); }
+        .gallery-card:hover .gallery-zoom { transform: translateY(0); opacity: 1; }
+        .gallery-zoom {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            z-index: 3;
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background: var(--gallery-purple);
+            box-shadow: 0 7px 18px rgba(0,0,0,.18);
+            transform: translateY(-8px);
+            opacity: .92;
+            transition: .25s ease;
+        }
+        .gallery-card-info {
+            position: absolute;
+            z-index: 3;
+            left: 18px;
+            right: 18px;
+            bottom: 17px;
+            color: #fff;
+        }
+        .gallery-card-info h3 {
             color: #fff;
             font-size: 18px;
+            font-weight: 800;
+            margin: 0 0 7px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
+        .gallery-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 12px;
+            color: rgba(255,255,255,.9);
+        }
+        .gallery-meta span { display: inline-flex; align-items: center; gap: 5px; }
+
+        .gallery-pagination { margin-top: 38px !important; }
+        .gallery-pagination .page-link {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50% !important;
+            margin: 0 4px;
+            color: var(--gallery-purple);
+            border: 1px solid #e5e7f0;
+            background: #fff;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(30,40,80,.05);
+        }
+        .gallery-pagination .page-item.active .page-link {
+            background: var(--gallery-blue);
+            border-color: var(--gallery-blue);
+            color: #fff;
+        }
+        .gallery-pagination .page-item.disabled .page-link { color: #b8bdca; }
+        .gallery-pagination .page-link:hover:not(.disabled) {
+            background: var(--gallery-purple);
+            border-color: var(--gallery-purple);
+            color: #fff;
+        }
+
         .gallery-empty {
             min-height: 260px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #fff;
+            border-radius: 18px;
         }
-        .gallery-pagination .page-link {
-            color: #06BBCC;
-            border-color: #e8eef1;
+
+        /* Lightbox */
+        .gallery-lightbox { position: fixed; inset: 0; background: rgba(5,8,20,.94); z-index: 99999; display:flex; align-items:center; justify-content:center; padding:30px 80px; }
+        .gallery-lightbox img { max-width:90vw; max-height:88vh; object-fit:contain; border-radius:10px; box-shadow:0 20px 70px rgba(0,0,0,.45); }
+        .gallery-lightbox-btn, .gallery-lightbox-close { position:fixed; z-index:100001; border:0; color:#fff; background:rgba(255,255,255,.16); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:.2s; }
+        .gallery-lightbox-btn:hover, .gallery-lightbox-close:hover { background:var(--gallery-purple); }
+        .gallery-lightbox-prev { left:22px; top:50%; transform:translateY(-50%); }
+        .gallery-lightbox-next { right:22px; top:50%; transform:translateY(-50%); }
+        .gallery-lightbox-close { top:20px; right:22px; font-size:25px; }
+        .gallery-lightbox-counter { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); color:#fff; background:rgba(0,0,0,.5); padding:7px 14px; border-radius:20px; z-index:100001; font-size:13px; }
+
+        @media (max-width: 991px) {
+            .gallery-hero { margin-bottom: 105px; }
+            .gallery-stats { padding: 18px 10px; }
+            .gallery-stat { padding: 4px 6px; }
         }
-        .gallery-pagination .page-item.active .page-link {
-            background: #06BBCC;
-            border-color: #06BBCC;
-            color: #fff;
+        @media (max-width: 767px) {
+            .gallery-hero { min-height: 300px; margin-bottom: 175px; }
+            .gallery-stats { bottom: -125px; }
+            .gallery-stat { margin-bottom: 10px; }
+            .gallery-card { height: 250px; }
+            .gallery-lightbox { padding: 20px 55px; }
+            .gallery-lightbox-btn { width:42px; height:42px; }
+            .gallery-lightbox-prev { left:7px; }
+            .gallery-lightbox-next { right:7px; }
+            .gallery-lightbox-close { right:9px; top:9px; }
         }
-        .gallery-pagination .page-item.disabled .page-link {
-            color: #adb5bd;
-        }
-/* Gallery Lightbox */
-.gallery-lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.92);
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px 80px;
-}
-
-.gallery-lightbox img {
-    max-width: 90vw;
-    max-height: 88vh;
-    object-fit: contain;
-    border-radius: 5px;
-    user-select: none;
-}
-
-.gallery-lightbox-btn {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 52px;
-    height: 52px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.18);
-    color: #fff;
-    font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 100001;
-    transition: all .2s ease;
-}
-
-.gallery-lightbox-btn:hover {
-    background: #06BBCC;
-}
-
-.gallery-lightbox-prev {
-    left: 20px;
-}
-
-.gallery-lightbox-next {
-    right: 20px;
-}
-
-.gallery-lightbox-close {
-    position: fixed;
-    top: 20px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    border: none;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.18);
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-    z-index: 100001;
-}
-
-.gallery-lightbox-close:hover {
-    background: #dc3545;
-}
-
-.gallery-lightbox-counter {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    background: rgba(0,0,0,.55);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    z-index: 100001;
-}
-
-@media (max-width: 768px) {
-    .gallery-lightbox {
-        padding: 20px 55px;
-    }
-
-    .gallery-lightbox-btn {
-        width: 42px;
-        height: 42px;
-        font-size: 24px;
-    }
-
-    .gallery-lightbox-prev {
-        left: 8px;
-    }
-
-    .gallery-lightbox-next {
-        right: 8px;
-    }
-
-    .gallery-lightbox-close {
-        top: 10px;
-        right: 10px;
-    }
-
-    .gallery-lightbox img {
-        max-width: 95vw;
-        max-height: 82vh;
-    }
-}
     </style>
 </head>
 
@@ -246,66 +350,122 @@ $photos = $stmt->fetchAll();
     </nav>
     <!-- Navbar End -->
 
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Gallery</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Gallery</li>
-                        </ol>
-                    </nav>
+    <!-- Gallery Hero Start -->
+    <section class="gallery-hero">
+        <div class="container gallery-hero-content">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9">
+                    <span class="gallery-kicker">Our Memories</span>
+                    <h1 class="text-white">Photo Gallery</h1>
+                    <p>Glimpses of learning, celebrations, activities and achievements at Gyaana International School.</p>
+                    <div class="gallery-hero-line"><i class="fa fa-camera"></i></div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+
+        <div class="gallery-stats">
+            <div class="row align-items-center">
+                <div class="col-6 col-md-3">
+                    <div class="gallery-stat">
+                        <div class="gallery-stat-icon"><i class="fa fa-images"></i></div>
+                        <div><strong><?= number_format($total) ?>+</strong><span>Photos</span></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-stat">
+                        <div class="gallery-stat-icon"><i class="fa fa-calendar-alt"></i></div>
+                        <div><strong><?= number_format($eventCount) ?>+</strong><span>Events</span></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-stat">
+                        <div class="gallery-stat-icon"><i class="fa fa-layer-group"></i></div>
+                        <div><strong><?= number_format($totalPages) ?></strong><span>Gallery Pages</span></div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="gallery-stat">
+                        <div class="gallery-stat-icon"><i class="fa fa-heart"></i></div>
+                        <div><strong>100%</strong><span>School Memories</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Hero End -->
 
     <!-- Gallery Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <?php if (empty($photos)): ?>
-                <div class="gallery-empty">
-                    <p class="text-muted mb-0">Gallery jald hi update ki jayegi. Please check back soon.</p>
-                </div>
-            <?php else: ?>
-                <div class="row g-4">
-                    <?php foreach ($photos as $photo): ?>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <a href="<?= htmlspecialchars(UPLOAD_URL . $photo['image_path']) ?>" class="gallery-item d-block" data-gallery="school-gallery" aria-label="Open gallery image">
-                                <img src="<?= htmlspecialchars(UPLOAD_URL . $photo['image_path']) ?>" alt="<?= htmlspecialchars($photo['caption'] ?: 'Gyaana International School Gallery') ?>" loading="lazy">
-                                <span class="gallery-overlay"><i class="fa fa-search-plus"></i></span>
-                            </a>
-                        </div>
-                    <?php endforeach; ?>
+    <section class="gallery-section">
+        <div class="container-xxl">
+            <div class="container">
+                <div class="gallery-heading">
+                    <div class="eyebrow">School Life • Moments • Memories</div>
+                    <h2>Explore Our School Memories</h2>
+                    <p>Every picture tells a story. Browse moments from our school events, activities, celebrations and everyday learning.</p>
                 </div>
 
-                <?php if ($totalPages > 1): ?>
-                    <nav class="gallery-pagination mt-5" aria-label="Gallery pagination">
-                        <ul class="pagination justify-content-center mb-0">
-                            <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
-                                <a class="page-link" href="?page=<?= max(1, $page - 1) ?>" aria-label="Previous">&laquo;</a>
-                            </li>
+                <?php if (empty($photos)): ?>
+                    <div class="gallery-empty">
+                        <p class="text-muted mb-0">Gallery jald hi update ki jayegi. Please check back soon.</p>
+                    </div>
+                <?php else: ?>
+                    <div class="row g-4">
+                        <?php foreach ($photos as $photo): ?>
+                            <?php
+                                $eventTitle = trim($photo['event_title'] ?? '');
+                                $eventTitle = $eventTitle !== '' ? $eventTitle : 'School Memories';
+                                $eventDate = !empty($photo['event_date']) ? date('d M Y', strtotime($photo['event_date'])) : '';
+                                $eventCountForCard = (int)($photo['event_photo_count'] ?? 0);
+                                $imageUrl = UPLOAD_URL . $photo['image_path'];
+                            ?>
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <a href="<?= htmlspecialchars($imageUrl) ?>"
+                                   class="gallery-card"
+                                   data-gallery="school-gallery"
+                                   aria-label="Open <?= htmlspecialchars($eventTitle) ?> photo">
+                                    <img src="<?= htmlspecialchars($imageUrl) ?>"
+                                         alt="<?= htmlspecialchars($photo['caption'] ?: $eventTitle) ?>"
+                                         loading="lazy">
+                                    <span class="gallery-zoom"><i class="fa fa-search-plus"></i></span>
+                                    <span class="gallery-card-info">
+                                        <h3><?= htmlspecialchars($eventTitle) ?></h3>
+                                        <span class="gallery-meta">
+                                            <?php if ($eventDate): ?>
+                                                <span><i class="fa fa-calendar-alt"></i> <?= htmlspecialchars($eventDate) ?></span>
+                                            <?php endif; ?>
+                                            <?php if ($eventCountForCard > 0): ?>
+                                                <span><i class="fa fa-images"></i> <?= $eventCountForCard ?></span>
+                                            <?php endif; ?>
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
 
-                            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
-                                <li class="page-item <?= $i === $page ? 'active' : '' ?>">
-                                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                    <?php if ($totalPages > 1): ?>
+                        <nav class="gallery-pagination" aria-label="Gallery pagination">
+                            <ul class="pagination justify-content-center mb-0">
+                                <li class="page-item <?= $page <= 1 ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="?page=<?= max(1, $page - 1) ?>" aria-label="Previous">&#10094;</a>
                                 </li>
-                            <?php endfor; ?>
 
-                            <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
-                                <a class="page-link" href="?page=<?= min($totalPages, $page + 1) ?>" aria-label="Next">&raquo;</a>
-                            </li>
-                        </ul>
-                    </nav>
+                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                    <li class="page-item <?= $i === $page ? 'active' : '' ?>">
+                                        <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <li class="page-item <?= $page >= $totalPages ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="?page=<?= min($totalPages, $page + 1) ?>" aria-label="Next">&#10095;</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    <?php endif; ?>
                 <?php endif; ?>
-            <?php endif; ?>
+            </div>
         </div>
-    </div>
+    </section>
     <!-- Gallery End -->
 
     <!-- Footer Start -->
@@ -374,153 +534,87 @@ $photos = $stmt->fetchAll();
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Simple image viewer; no event pages or event UI. -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
+    <!-- Gallery Lightbox -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const galleryLinks = Array.from(document.querySelectorAll('[data-gallery="school-gallery"]'));
+        if (!galleryLinks.length) return;
 
-    const galleryLinks = Array.from(
-        document.querySelectorAll('[data-gallery="school-gallery"]')
-    );
+        let currentIndex = 0;
+        let lightbox = null;
 
-    if (!galleryLinks.length) return;
+        function openLightbox(index) {
+            currentIndex = index;
+            lightbox = document.createElement('div');
+            lightbox.className = 'gallery-lightbox';
+            lightbox.innerHTML = `
+                <button type="button" class="gallery-lightbox-btn gallery-lightbox-prev" aria-label="Previous image">&#10094;</button>
+                <img src="" alt="Gallery image">
+                <button type="button" class="gallery-lightbox-btn gallery-lightbox-next" aria-label="Next image">&#10095;</button>
+                <button type="button" class="gallery-lightbox-close" aria-label="Close">&times;</button>
+                <div class="gallery-lightbox-counter"></div>
+            `;
+            document.body.appendChild(lightbox);
 
-    let currentIndex = 0;
-    let lightbox = null;
-    let lightboxImage = null;
-    let counter = null;
+            const image = lightbox.querySelector('img');
+            const prev = lightbox.querySelector('.gallery-lightbox-prev');
+            const next = lightbox.querySelector('.gallery-lightbox-next');
+            const close = lightbox.querySelector('.gallery-lightbox-close');
+            const counter = lightbox.querySelector('.gallery-lightbox-counter');
 
-    function openLightbox(index) {
-        currentIndex = index;
-
-        lightbox = document.createElement('div');
-        lightbox.className = 'gallery-lightbox';
-
-        lightbox.innerHTML = `
-            <button class="gallery-lightbox-btn gallery-lightbox-prev"
-                    aria-label="Previous image">
-                &#10094;
-            </button>
-
-            <img src="" alt="Gallery Image">
-
-            <button class="gallery-lightbox-btn gallery-lightbox-next"
-                    aria-label="Next image">
-                &#10095;
-            </button>
-
-            <button class="gallery-lightbox-close"
-                    aria-label="Close">
-                &times;
-            </button>
-
-            <div class="gallery-lightbox-counter"></div>
-        `;
-
-        document.body.appendChild(lightbox);
-
-        lightboxImage = lightbox.querySelector('img');
-        counter = lightbox.querySelector('.gallery-lightbox-counter');
-
-        const prevBtn = lightbox.querySelector('.gallery-lightbox-prev');
-        const nextBtn = lightbox.querySelector('.gallery-lightbox-next');
-        const closeBtn = lightbox.querySelector('.gallery-lightbox-close');
-
-        function updateImage() {
-            const link = galleryLinks[currentIndex];
-
-            lightboxImage.src = link.href;
-
-            const img = link.querySelector('img');
-            lightboxImage.alt = img
-                ? img.alt
-                : 'Gyaana International School Gallery';
-
-            counter.textContent =
-                (currentIndex + 1) + ' / ' + galleryLinks.length;
-
-            // Hide arrows when only one image
-            if (galleryLinks.length <= 1) {
-                prevBtn.style.display = 'none';
-                nextBtn.style.display = 'none';
-            } else {
-                prevBtn.style.display = 'flex';
-                nextBtn.style.display = 'flex';
+            function update() {
+                const link = galleryLinks[currentIndex];
+                image.src = link.href;
+                const sourceImage = link.querySelector('img');
+                image.alt = sourceImage ? sourceImage.alt : 'Gyaana International School Gallery';
+                counter.textContent = `${currentIndex + 1} / ${galleryLinks.length}`;
+                const hide = galleryLinks.length <= 1;
+                prev.style.display = hide ? 'none' : 'flex';
+                next.style.display = hide ? 'none' : 'flex';
             }
-        }
 
-        function previousImage(e) {
-            if (e) e.stopPropagation();
+            function previous(e) {
+                if (e) e.stopPropagation();
+                currentIndex = (currentIndex - 1 + galleryLinks.length) % galleryLinks.length;
+                update();
+            }
 
-            currentIndex =
-                (currentIndex - 1 + galleryLinks.length)
-                % galleryLinks.length;
+            function following(e) {
+                if (e) e.stopPropagation();
+                currentIndex = (currentIndex + 1) % galleryLinks.length;
+                update();
+            }
 
-            updateImage();
-        }
-
-        function nextImage(e) {
-            if (e) e.stopPropagation();
-
-            currentIndex =
-                (currentIndex + 1)
-                % galleryLinks.length;
-
-            updateImage();
-        }
-
-        function closeLightbox() {
-            if (lightbox) {
-                lightbox.remove();
+            function closeLightbox() {
+                if (lightbox) lightbox.remove();
                 lightbox = null;
+                document.removeEventListener('keydown', keyboard);
             }
 
-            document.removeEventListener('keydown', keyboardNavigation);
+            function keyboard(e) {
+                if (e.key === 'ArrowLeft') previous();
+                if (e.key === 'ArrowRight') following();
+                if (e.key === 'Escape') closeLightbox();
+            }
+
+            prev.addEventListener('click', previous);
+            next.addEventListener('click', following);
+            close.addEventListener('click', function (e) { e.stopPropagation(); closeLightbox(); });
+            image.addEventListener('click', function (e) { e.stopPropagation(); });
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+            document.addEventListener('keydown', keyboard);
+            update();
         }
 
-        function keyboardNavigation(e) {
-            if (e.key === 'ArrowLeft') {
-                previousImage();
-            }
-
-            if (e.key === 'ArrowRight') {
-                nextImage();
-            }
-
-            if (e.key === 'Escape') {
-                closeLightbox();
-            }
-        }
-
-        prevBtn.addEventListener('click', previousImage);
-        nextBtn.addEventListener('click', nextImage);
-        closeBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            closeLightbox();
-        });
-
-        lightbox.addEventListener('click', function (e) {
-            if (e.target === lightbox) {
-                closeLightbox();
-            }
-        });
-
-        lightboxImage.addEventListener('click', function (e) {
-            e.stopPropagation();
-        });
-
-        document.addEventListener('keydown', keyboardNavigation);
-
-        updateImage();
-    }
-
-    galleryLinks.forEach(function (link, index) {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            openLightbox(index);
+        galleryLinks.forEach(function (link, index) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                openLightbox(index);
+            });
         });
     });
-
-});
-</script>
+    </script>
 </body>
 </html>
