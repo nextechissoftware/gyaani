@@ -97,6 +97,118 @@ $photos = $stmt->fetchAll();
         .gallery-pagination .page-item.disabled .page-link {
             color: #adb5bd;
         }
+/* Gallery Lightbox */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 80px;
+}
+
+.gallery-lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.gallery-lightbox-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100001;
+    transition: all .2s ease;
+}
+
+.gallery-lightbox-btn:hover {
+    background: #06BBCC;
+}
+
+.gallery-lightbox-prev {
+    left: 20px;
+}
+
+.gallery-lightbox-next {
+    right: 20px;
+}
+
+.gallery-lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 100001;
+}
+
+.gallery-lightbox-close:hover {
+    background: #dc3545;
+}
+
+.gallery-lightbox-counter {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background: rgba(0,0,0,.55);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 100001;
+}
+
+@media (max-width: 768px) {
+    .gallery-lightbox {
+        padding: 20px 55px;
+    }
+
+    .gallery-lightbox-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+    }
+
+    .gallery-lightbox-prev {
+        left: 8px;
+    }
+
+    .gallery-lightbox-next {
+        right: 8px;
+    }
+
+    .gallery-lightbox-close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .gallery-lightbox img {
+        max-width: 95vw;
+        max-height: 82vh;
+    }
+}
     </style>
 </head>
 
@@ -263,21 +375,152 @@ $photos = $stmt->fetchAll();
     <script src="js/main.js"></script>
 
     <!-- Simple image viewer; no event pages or event UI. -->
-    <script>
-        document.querySelectorAll('[data-gallery="school-gallery"]').forEach(function (link) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                var overlay = document.createElement('div');
-                overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:99999;display:flex;align-items:center;justify-content:center;padding:25px;cursor:zoom-out;';
-                var img = document.createElement('img');
-                img.src = this.href;
-                img.style.cssText = 'max-width:95vw;max-height:90vh;object-fit:contain;cursor:default;border-radius:4px;';
-                overlay.appendChild(img);
-                overlay.addEventListener('click', function () { overlay.remove(); });
-                img.addEventListener('click', function (ev) { ev.stopPropagation(); });
-                document.body.appendChild(overlay);
-            });
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    const galleryLinks = Array.from(
+        document.querySelectorAll('[data-gallery="school-gallery"]')
+    );
+
+    if (!galleryLinks.length) return;
+
+    let currentIndex = 0;
+    let lightbox = null;
+    let lightboxImage = null;
+    let counter = null;
+
+    function openLightbox(index) {
+        currentIndex = index;
+
+        lightbox = document.createElement('div');
+        lightbox.className = 'gallery-lightbox';
+
+        lightbox.innerHTML = `
+            <button class="gallery-lightbox-btn gallery-lightbox-prev"
+                    aria-label="Previous image">
+                &#10094;
+            </button>
+
+            <img src="" alt="Gallery Image">
+
+            <button class="gallery-lightbox-btn gallery-lightbox-next"
+                    aria-label="Next image">
+                &#10095;
+            </button>
+
+            <button class="gallery-lightbox-close"
+                    aria-label="Close">
+                &times;
+            </button>
+
+            <div class="gallery-lightbox-counter"></div>
+        `;
+
+        document.body.appendChild(lightbox);
+
+        lightboxImage = lightbox.querySelector('img');
+        counter = lightbox.querySelector('.gallery-lightbox-counter');
+
+        const prevBtn = lightbox.querySelector('.gallery-lightbox-prev');
+        const nextBtn = lightbox.querySelector('.gallery-lightbox-next');
+        const closeBtn = lightbox.querySelector('.gallery-lightbox-close');
+
+        function updateImage() {
+            const link = galleryLinks[currentIndex];
+
+            lightboxImage.src = link.href;
+
+            const img = link.querySelector('img');
+            lightboxImage.alt = img
+                ? img.alt
+                : 'Gyaana International School Gallery';
+
+            counter.textContent =
+                (currentIndex + 1) + ' / ' + galleryLinks.length;
+
+            // Hide arrows when only one image
+            if (galleryLinks.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+        }
+
+        function previousImage(e) {
+            if (e) e.stopPropagation();
+
+            currentIndex =
+                (currentIndex - 1 + galleryLinks.length)
+                % galleryLinks.length;
+
+            updateImage();
+        }
+
+        function nextImage(e) {
+            if (e) e.stopPropagation();
+
+            currentIndex =
+                (currentIndex + 1)
+                % galleryLinks.length;
+
+            updateImage();
+        }
+
+        function closeLightbox() {
+            if (lightbox) {
+                lightbox.remove();
+                lightbox = null;
+            }
+
+            document.removeEventListener('keydown', keyboardNavigation);
+        }
+
+        function keyboardNavigation(e) {
+            if (e.key === 'ArrowLeft') {
+                previousImage();
+            }
+
+            if (e.key === 'ArrowRight') {
+                nextImage();
+            }
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        }
+
+        prevBtn.addEventListener('click', previousImage);
+        nextBtn.addEventListener('click', nextImage);
+        closeBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closeLightbox();
         });
-    </script>
+
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        lightboxImage.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+        document.addEventListener('keydown', keyboardNavigation);
+
+        updateImage();
+    }
+
+    galleryLinks.forEach(function (link, index) {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            openLightbox(index);
+        });
+    });
+
+});
+</script>
 </body>
 </html>
