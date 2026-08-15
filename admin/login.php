@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
-        <form method="POST" action="login.php">
+        <form method="POST" action="/admin/login">
             <div class="form-group">
                 <label>Username or Email</label>
                 <input type="text" name="username" class="form-control" required autofocus>
