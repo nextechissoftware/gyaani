@@ -374,7 +374,7 @@ $eventCount = (int)$pdo->query("SELECT COUNT(*) FROM gallery_events")->fetchColu
                 <div class="col-6 col-md-3">
                     <div class="gallery-stat">
                         <div class="gallery-stat-icon"><i class="fa fa-calendar-alt"></i></div>
-                        <div><strong><?= number_format($eventCount) ?>+</strong><span>Events</span></div>
+                        <div><strong>50+</strong><span>Events</span></div>
                     </div>
                 </div>
                 <div class="col-6 col-md-3">
@@ -427,7 +427,7 @@ $eventCount = (int)$pdo->query("SELECT COUNT(*) FROM gallery_events")->fetchColu
                                          alt="<?= htmlspecialchars($photo['caption'] ?: $eventTitle) ?>"
                                          loading="lazy">
                                     <span class="gallery-zoom"><i class="fa fa-search-plus"></i></span>
-                                    <span class="gallery-card-info">
+                                    <!-- <span class="gallery-card-info">
                                         <h3><?= htmlspecialchars($eventTitle) ?></h3>
                                         <span class="gallery-meta">
                                             <?php if ($eventDate): ?>
@@ -437,7 +437,7 @@ $eventCount = (int)$pdo->query("SELECT COUNT(*) FROM gallery_events")->fetchColu
                                                 <span><i class="fa fa-images"></i> <?= $eventCountForCard ?></span>
                                             <?php endif; ?>
                                         </span>
-                                    </span>
+                                    </span> -->
                                 </a>
                             </div>
                         <?php endforeach; ?>
