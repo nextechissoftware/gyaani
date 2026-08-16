@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
                 @mkdir(UPLOAD_DIR, 0755, true);
             }
             if (!is_dir(UPLOAD_DIR) || !is_writable(UPLOAD_DIR)) {
-                $error = 'Upload folder (uploads/gallery/) likhne layak nahi hai. Server par folder permissions 755 (ya 775) set karo.';
+                $error = 'Upload folder (assets/gallery/) likhne layak nahi hai. Server par folder permissions 755 (ya 775) set karo.';
             } else {
                 $allowedExt  = ['jpg', 'jpeg', 'png', 'webp'];
                 $allowedMime = ['image/jpeg', 'image/png', 'image/webp'];

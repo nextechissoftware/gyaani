@@ -18,9 +18,9 @@ $docRoot = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT'] ?? '');
 $thisDir = str_replace('\\', '/', __DIR__);
 define('BASE_PATH', rtrim(substr($thisDir, strlen($docRoot)), '/'));
  
-// Upload folder (relative path from this file)
-define('UPLOAD_DIR', __DIR__ . '/uploads/gallery/');
-define('UPLOAD_URL', BASE_PATH . '/uploads/gallery/');
+// Upload folder (assets/gallery lives at project root, one level above /admin)
+define('UPLOAD_DIR', dirname(__DIR__) . '/assets/gallery/');
+define('UPLOAD_URL', '/assets/gallery/');
 
 
 date_default_timezone_set('Asia/Kolkata');
