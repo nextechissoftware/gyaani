@@ -265,7 +265,7 @@ require_once __DIR__ . '/includes/header.php';
 
 <div class="card">
     <h3 style="margin-top:0;color:#0f2540;"><i class="fa-solid fa-upload"></i> Upload Photos</h3>
-    <form method="POST" action="/admin/gallery.php" enctype="multipart/form-data" id="uploadForm">
+    <form method="POST" action="/admin/gallery" enctype="multipart/form-data" id="uploadForm">
         <input type="hidden" name="action" value="upload_photos">
 
         <div class="form-group">
@@ -311,7 +311,7 @@ require_once __DIR__ . '/includes/header.php';
             Photos (<?= (int)$total ?><?= $filterEvent > 0 ? ' in this event' : ' total' ?>)
         </h3>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-            <form method="GET" action="/admin/gallery.php" style="display:flex;gap:8px;">
+            <form method="GET" action="/admin/gallery" style="display:flex;gap:8px;">
                 <select name="event" class="form-control" onchange="this.form.submit()">
                     <option value="0">All Events</option>
                     <?php foreach ($events as $ev): ?>
@@ -334,7 +334,7 @@ require_once __DIR__ . '/includes/header.php';
                     <?php if ($filterEvent === 0): ?>
                         <div style="font-size:11px;color:#8593a0;padding:4px 2px;"><?= htmlspecialchars($p['event_title']) ?></div>
                     <?php endif; ?>
-                    <form method="GET" action="/admin/gallery.php" onsubmit="return confirm('Ye photo delete karein?');">
+                    <form method="GET" action="/admin/gallery" onsubmit="return confirm('Ye photo delete karein?');">
                         <input type="hidden" name="event" value="<?= $filterEvent ?>">
                         <button type="submit" name="delete_photo" value="<?= $p['id'] ?>" title="Delete">
                             <i class="fa-solid fa-xmark"></i>
