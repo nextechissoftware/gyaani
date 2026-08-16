@@ -324,6 +324,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
     </div>
 
+    
     <?php if (empty($photos)): ?>
         <p style="color:#8593a0;">Abhi tak koi photo upload nahi hui.</p>
     <?php else: ?>
