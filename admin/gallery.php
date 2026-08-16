@@ -67,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $eventId = 0;
         }
     }
-
     if (!$error && $eventId > 0) {
         if (empty($_FILES['photos']) || empty($_FILES['photos']['name'][0])) {
             $error = 'Koi photo select nahi ki.';
