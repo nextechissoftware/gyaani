@@ -166,7 +166,7 @@
                     <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
                         <span style="overflow-wrap: anywhere;">
-                            principal@gyaanainternationalschool.com
+                            gyaanagausganj@gmail.com
                         </span>
                     </p>
 

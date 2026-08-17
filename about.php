@@ -686,7 +686,7 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7522852280</p>
                     <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
-                        <span style="overflow-wrap:anywhere;">principal@gyaanainternationalschool.com</span>
+                        <span style="overflow-wrap:anywhere;">gyaanagausganj@gmail.com</span>
                     </p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>

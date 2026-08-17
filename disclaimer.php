@@ -254,7 +254,7 @@
             <h3>Questions about this disclaimer?</h3>
             <p>For clarification regarding this Disclaimer Policy or any information published by the School, please contact:</p>
             <p><strong>Gyaana International School</strong><br>Kahli Gausganj, Hardoi, Uttar Pradesh, India</p>
-            <p>Email: <a href="mailto:support@gyaanainternationalschool.com">support@gyaanainternationalschool.com</a></p>
+            <p>Email: <a href="mailto:gyaanagausganj@gmail.com">gyaanagausganj@gmail.com</a></p>
             <p>Phone: <a href="tel:+917522852280">+91 75228 52280</a></p>
             <p>Website: <a href="https://www.gyaanainternational.com" target="_blank" rel="noopener">www.gyaanainternational.com</a></p>
         </div>
@@ -295,7 +295,7 @@
                     <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
                         <span style="overflow-wrap: anywhere;">
-                            principal@gyaanainternationalschool.com
+                            gyaanagausganj@gmail.com
                         </span>
                     </p>
 

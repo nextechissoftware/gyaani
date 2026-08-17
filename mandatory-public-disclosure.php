@@ -211,7 +211,7 @@
       <tr><td>3</td><td>School Code (If Applicable)</td><td><span>72403</span></td></tr>
       <tr><td>4</td><td>Complete Address with Pin Code</td><td>Kahli, Gausganj, Hardoi, UTTAR PRADESH - 273202</td></tr>
       <tr><td>5</td><td>Principal Name &amp; Qualification</td><td>Mr. Gaurav Kumar Agarwal</td></tr>
-      <tr><td>6</td><td>School Email ID</td><td>principal@gyaanainternationalschool.com</td></tr>
+      <tr><td>6</td><td>School Email ID</td><td>gyaanagausganj@gmail.com</td></tr>
       <tr><td>7</td><td>Contact Details (Landline / Mobile)</td><td>+91 7522852280</td></tr>
     </tbody>
   </table>

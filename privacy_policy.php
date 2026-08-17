@@ -252,7 +252,7 @@
             <h3>Have a question about your data?</h3>
             <p>For corrections, privacy concerns or complaints regarding personal information, please reach out to:</p>
             <p><strong>Gyaana International School</strong><br>Kahli Gausganj, Hardoi, Uttar Pradesh, India</p>
-            <p>Email: <a href="mailto:support@gyaanainternationalschool.com">support@gyaanainternationalschool.com</a></p>
+            <p>Email: <a href="mailto:gyaanagausganj@gmail.com">gyaanagausganj@gmail.com</a></p>
             <p>Phone: <a href="tel:+917522852280">+91 75228 52280</a></p>
             <p>Privacy/Grievance Contact Person: <strong>Mr. Dhirendra Kumar</strong>, Assistant Manager</p>
         </div>
@@ -293,7 +293,7 @@
                     <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
                         <span style="overflow-wrap: anywhere;">
-                            principal@gyaanainternationalschool.com
+                            gyaanagausganj@gmail.com
                         </span>
                     </p>
 

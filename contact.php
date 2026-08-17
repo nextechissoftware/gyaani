@@ -123,7 +123,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">Support@gyaanainternationalschool.com</p>
+                            <p class="mb-0">gyaanagausganj@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                     <p class="mb-2 d-flex">
                         <i class="fa fa-envelope me-3"></i>
                         <span style="overflow-wrap: anywhere;">
-                            principal@gyaanainternationalschool.com
+                            gyaanagausganj@gmail.com
                         </span>
                     </p>
 

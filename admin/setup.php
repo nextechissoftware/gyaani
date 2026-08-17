@@ -72,7 +72,7 @@ try {
             INSERT INTO admin_users (name, username, email, password)
             VALUES (?, ?, ?, ?)
         ");
-        $insert->execute(['Admin', 'admin', 'support@gyaanainternationalschool.com', $hashed]);
+        $insert->execute(['Admin', 'admin', 'gyaanagausganj@gmail.com', $hashed]);
 
         $messages[] = "✔ Default admin created &rarr; username: <b>admin</b> &nbsp; password: <b>{$defaultPassword}</b>";
         $messages[] = "⚠ Login karte hi is password ko change kar lena (Dashboard &rarr; Profile).";
