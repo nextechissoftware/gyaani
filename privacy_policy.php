@@ -319,13 +319,14 @@
 
                 <!-- Admissions -->
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Admissions</h4>
-
-                    <p>
-                        Admissions are open for Nursery to Class VIII.
-                        Join Gyaana International School and provide your child
-                        with a strong foundation for a bright future.
-                    </p>
+                    <div class="fb-page-embed">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F100077246062188&tabs=timeline&width=280&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+                            width="280" height="500" style="border:none;overflow:hidden;max-width:100%;" scrolling="no" frameborder="0"
+                            allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" loading="lazy"></iframe>
+                        <a href="https://www.facebook.com/people/Gyaana-International-School/100077246062188/" target="_blank" rel="noopener" class="d-block text-white mt-2" style="font-size:0.9rem;">
+                            <i class="fab fa-facebook-f me-1"></i> View our Facebook Page
+                        </a>
+                    </div>
                 </div>
 
             </div>
