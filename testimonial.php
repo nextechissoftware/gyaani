@@ -93,39 +93,71 @@
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Students Say!</h1>
+                <h1 class="mb-5">Our Parents Say!</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/abhishek.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Abhishek</h5>
+                    <p>Father of class 5 student</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Gyaana International School has been a wonderful choice for my son. Teachers are patient and genuinely care about every child's progress.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/shishir.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Shishir</h5>
+                    <p>Father of class 4 student</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">The school focuses equally on academics and values. My son has become more confident and disciplined since joining.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/shipra.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mrs. Shipra</h5>
+                    <p>Mother class 1 student</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Clean campus, friendly staff, and a curious-driven teaching style. Would definitely recommend to other parents.</p>
                     </div>
                 </div>
                 <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Client Name</h5>
-                    <p>Profession</p>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/atul.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Atul</h5>
+                    <p>Father of class 2 student</p>
                     <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                    <p class="mb-0">Best decision we made for our child's early education. The teachers communicate regularly and keep us updated on his growth."</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/seema.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mrs. Seema Devi</h5>
+                    <p>Mother of class 4B student</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">My son loves going to school every day. The activities and events keep her engaged beyond just textbooks</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/vikalp.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Vikalp Sharma</h5>
+                    <p>Father of class Nursery student</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Good infrastructure and a safe environment. The admission process was smooth and the staff was very helpful</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/deependra.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Deependra verma</h5>
+                    <p>Father of class 4 student</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Gyaana truly nurtures curiosity in kids. My son asks more questions now and enjoys learning new things.</p>
+                    </div>
+                </div>
+                <div class="testimonial-item text-center">
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/vipin.jpeg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">Mr. Vipin Gupta</h5>
+                    <p>Father of class 1 student</p>
+                    <div class="testimonial-text bg-light text-center p-4">
+                    <p class="mb-0">Very happy with the overall development of my child — academically, socially, and emotionally. Highly recommend this school</p>
                     </div>
                 </div>
             </div>
