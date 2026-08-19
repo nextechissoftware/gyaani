@@ -362,7 +362,7 @@
       <tr><td>6</td><td>No. of Girls Toilets</td><td>08</td></tr>
       <tr><td>7</td><td>No. of Boys Toilets</td><td>08</td></tr>
       <!-- <tr><td>8</td><td>No. of CWSN Toilets</td><td>02</td></tr> -->
-      <tr><td>9</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><a href="https://youtu.be/DVeLHMyhV2E?si=olmdVu_JMLSjXjZ6">View Video</a></td></tr>
+      <tr><td>9</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><a href="#">View Video</a></td></tr>
     </tbody>
   </table>
 
