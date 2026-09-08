@@ -179,7 +179,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Director</h6>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Chairman</h6>
                     <h1 class="mb-4">Mr. Shyam Ji Singh</h1>
                     <p class="mb-4">At Gyaana International School, we believe that true education is a collaborative journey where students, 
                         parents, teachers, and management work together with a shared vision. <br/>
@@ -306,9 +306,71 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/principal.jpeg" alt="" style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/director3.jpeg" alt="" style="object-fit: cover;">
                     </div>
                 </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Director</h6>
+                    <h1 class="mb-4">Mrs. Sandhya Singh</h1>
+                        <p class="mb-4">
+                            At Gyaana International School, we believe that every child is unique, with their own dreams, abilities, and potential. As a school, our endeavour is to provide an environment where every student feels valued, confident, and inspired to discover and nurture their strengths.
+                            For us, education is not limited to textbooks, classrooms, or examinations. It is about developing curious minds, compassionate hearts, strong character, and the confidence to face the world with courage and determination. Through a balanced blend of academics, co-curricular activities, discipline, and values, we strive to prepare our Gyaanians not only for successful careers but also for meaningful and responsible lives.
+                            I firmly believe that the journey of education becomes truly successful when schools and parents work together. The trust, involvement, and constant support of our parents play an invaluable role in shaping the growth and development of every child. Together, we can create a safe, positive, and nurturing environment where our students feel free to learn, express themselves, take on challenges, and grow into confident and well-rounded individuals.
+                        </p>
+                    <div class="row gy-2 gx-4 mb-4">
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Preparing Students for the Future
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Inspiring Innovative Learning
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Nurturing Strong Values & Character
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Building Confidence & Leadership
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Encouraging Creativity & Critical Thinking
+                            </p>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <p class="mb-0">
+                                <i class="fa fa-arrow-right text-primary me-2"></i>
+                                Shaping Responsible Global Citizens
+                            </p>
+                        </div>
+
+                    </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">A Message from the Principal</h6>
                     <h1 class="mb-4">Mr. Gaurav Kumar Agarwal</h1>
@@ -343,6 +405,11 @@
                             </div>
                         </div>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="about.php">About Us</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid position-absolute w-100 h-100" src="img/principal.jpeg" alt="" style="object-fit: cover;">
+                    </div>
                 </div>
             </div>
         </div>
