@@ -184,7 +184,7 @@
                 <a href="team.php" class="nav-item nav-link">Our Team</a>
                 <a href="gallery.php" class="nav-item nav-link">Gallery</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-                <a href="mandatory-public-disclosure.php" class="nav-item nav-link active">Mandatory Public Disclosure</a>
+                <a href="mandatory-public-disclosures.php" class="nav-item nav-link active">Mandatory Public Disclosure</a>
             </div>
         </div>
     </nav>
@@ -207,8 +207,8 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Name of the School</td><td>Gyaana International School</td></tr>
-      <tr><td>2</td><td>Affiliation No. (If Applicable)</td><td><span>-------</span></td></tr>
-      <tr><td>3</td><td>School Code (If Applicable)</td><td><span>-------</span></td></tr>
+      <tr><td>2</td><td>Affiliation No. (If Applicable)</td><td><span>----</span></td></tr>
+      <tr><td>3</td><td>School Code (If Applicable)</td><td><span>----</span></td></tr>
       <tr><td>4</td><td>Complete Address with Pin Code</td><td>Kahli, Gausganj, Hardoi, UTTAR PRADESH - 273202</td></tr>
       <tr><td>5</td><td>Principal Name &amp; Qualification</td><td>Mr. Gaurav Kumar Agarwal</td></tr>
       <tr><td>6</td><td>School Email ID</td><td>gyaanagausganj@gmail.com</td></tr>
@@ -227,10 +227,10 @@
     </thead>
     <tbody>
       <tr><td>1</td><td>Copies of Affiliation / Upgradation Letter and Recent Extension of Affiliation, if any</td><td style="text-align:right"><a href="mandatory-public-disclosure/affiliation_letter.pdf">Click to View</a></td></tr>
-      <tr><td>2</td><td>Copies of Societies / Trust / Company Registration / Renewal Certificate, as applicable</td><td style="text-align:right"><a href="mandatory-public-disclosure/Society.pdf">Click to View</a></td></tr>
+      <tr><td>2</td><td>Copies of Societies / Trust / Company Registration / Renewal Certificate, as applicable</td><td style="text-align:right"><a href="mandatory-public-disclosure/society.pdf">Click to View</a></td></tr>
       <tr><td>3</td><td>Copy of No Objection Certificate (NOC) issued, if applicable, by the State Govt. / UT</td><td style="text-align:right"><span class="blank">——————————</span></td></tr>
-      <tr><td>4</td><td>Copies of Recognition Certificate under RTE Act, 2009 and its Renewal, if applicable</td><td style="text-align:right"><a href="mandatory-public-disclosure/BSA.pdf">Click to View</a></td></tr>
-      <tr><td>5</td><td>Copy of Valid Building Safety Certificate as per the National Building Code</td><td style="text-align:right"><a href="mandatory-public-disclosure/building safety certificate.pdf">Click to View</a></td></tr>
+      <tr><td>4</td><td>Copies of Recognition Certificate under RTE Act, 2009 and its Renewal, if applicable</td><td style="text-align:right"><a href="mandatory-public-disclosure/recognition.pdf">Click to View</a></td></tr>
+      <tr><td>5</td><td>Copy of Valid Building Safety Certificate as per the National Building Code</td><td style="text-align:right"><a href="mandatory-public-disclosure/building.pdf">Click to View</a></td></tr>
       <tr><td>6</td><td>Copy of Valid Fire Safety Certificate issued by the Competent Authority</td><td style="text-align:right"><a href="mandatory-public-disclosure/fire.pdf">Click to View</a></td></tr>
       <tr><td>7</td><td>Copy of Water Health and Sanitation Certificate</td><td style="text-align:right"><a href="mandatory-public-disclosure/water_and_sanitation.pdf">Click to View</a></td></tr>
     </tbody>
@@ -250,7 +250,8 @@
       <tr><td>2</td><td>Annual Academic Calendar</td><td style="text-align:right"><a href="mandatory-public-disclosure/academic_calendar.pdf">Click to View</a></td></tr>
       <tr><td>3</td><td>List of School Management Committee (SMC)</td><td style="text-align:right"><a href="mandatory-public-disclosure/SMC.pdf">Click to View</a></td></tr>
       <tr><td>4</td><td>List of Parents Teachers Association (PTA) Members</td><td style="text-align:right"><a href="mandatory-public-disclosure/pta.pdf">Click to View</a></td></tr>
-      <tr><td>5</td><td>Last Three-Year Result of the Board Examination (as per applicability)</td><td style="text-align:right"><span class="blank">——————————</span></td></tr>
+      <tr><td>5</td><td>Self Certification / DEA</td><td style="text-align:right"><a href="mandatory-public-disclosure/self_certification.pdf">Click to View</a></td></tr>
+      <tr><td>6</td><td>Last Three-Year Result of the Board Examination (as per applicability)</td><td style="text-align:right"><span class="blank">——————————</span></td></tr>
     </tbody>
   </table>
 

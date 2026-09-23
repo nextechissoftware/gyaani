@@ -344,7 +344,7 @@ $eventCount = (int)$pdo->query("SELECT COUNT(*) FROM gallery_events")->fetchColu
                 <a href="team.php" class="nav-item nav-link">Our Team</a>
                 <a href="gallery.php" class="nav-item nav-link active">Gallery</a>
                 <a href="contact.php" class="nav-item nav-link">Contact</a>
-                <a href="mandatory-public-disclosure.php" class="nav-item nav-link">Mandatory Public Disclosure</a>
+                <a href="mandatory-public-disclosures.php" class="nav-item nav-link">Mandatory Public Disclosure</a>
             </div>
         </div>
     </nav>
