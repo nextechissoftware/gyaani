@@ -209,9 +209,9 @@
       <tr><td>1</td><td>Name of the School</td><td>Gyaana International School</td></tr>
       <tr><td>2</td><td>Affiliation No. (If Applicable)</td><td><span>----</span></td></tr>
       <tr><td>3</td><td>School Code (If Applicable)</td><td><span>----</span></td></tr>
-      <tr><td>4</td><td>Complete Address with Pin Code</td><td>Kahli, Gausganj, Hardoi, UTTAR PRADESH - 273202</td></tr>
-      <tr><td>5</td><td>Principal Name &amp; Qualification</td><td>Mr. Gaurav Kumar Agarwal</td></tr>
-      <tr><td>6</td><td>School Email ID</td><td>gyaanagausganj@gmail.com</td></tr>
+      <tr><td>4</td><td>Complete Address with Pin Code</td><td>Kahli, Gausganj, Hardoi, Uttar Pradesh &ndash; 241305</td></tr>
+      <tr><td>5</td><td>Principal Name &amp; Qualification</td><td>Mr. Gaurav Kumar Agarwal (B.Ed, MCA, M.Phil)</td></tr>
+      <tr><td>6</td><td>School Email ID</td><td>gyaanainternationalschool30@gmail.com</td></tr>
       <tr><td>7</td><td>Contact Details (Landline / Mobile)</td><td>+91 7522852280</td></tr>
     </tbody>
   </table>
@@ -316,7 +316,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td>Principal</td><td>01</td></tr>
+      <tr><td>1</td><td>Principal</td><td>Mr. Gaurav Kumar Agarwal</td></tr>
       <tr><td>2</td><td>Vice Principal</td><td><span class="blank">——</span></td></tr>
       <tr><td>3</td><td>Headmistress / Headmaster</td><td><span>01</span></td></tr>
       <tr>
@@ -330,17 +330,17 @@
           </ul>
         </td>
         <td>
-          <strong>Total Teachers: 19</strong><br><br>
+          <strong>Total Teachers: 20</strong><br><br>
           <ul class="sub-list">
-            <li>PGT – 05</li>
-            <li>TGT – 08</li>
-            <li>PRT – 06</li>
+            <li>PGT – 0</li>
+            <li>TGT – 07</li>
+            <li>PRT – 10</li>
           </ul>
         </td>
       </tr>
       <tr><td>5</td><td>Teacher–Section Ratio</td><td>1.5 : 1</td></tr>
-      <tr><td>6</td><td>Details of Special Educator</td><td>1</td></tr>
-      <tr><td>7</td><td>Details of Counsellor &amp; Wellness Teacher</td><td>1</td></tr>
+      <tr><td>6</td><td>Details of Special Educator</td><td>Somendra Singh</td></tr>
+      <tr><td>7</td><td>Details of Counsellor &amp; Wellness Teacher</td><td>Shivani Gautam &amp; Arti</td></tr>
     </tbody>
   </table>
 
@@ -355,15 +355,60 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td>Total Campus Area of the School (in Sq. Mtr.)</td><td>6226 Sq. Mtr.</td></tr>
-      <tr><td>2</td><td>No. and Size of the Classrooms (in Sq. Mtr.)</td><td>No.: 15 / Size: 48 Sq. Mtr.</td></tr>
-      <tr><td>3</td><td>No. and Size of Laboratories including Computer Labs (in Sq. Mtr.)</td><td>No.: 06 / Size: 56 Sq. Mtr.</td></tr>
+      <tr><td>1</td><td>Total Campus Area of the School (in Sq. Mtr.)</td><td>6394.40 Sq. Mtr.</td></tr>
+      <tr><td>2</td><td>No. and Size of the Classrooms (in Sq. Mtr.)</td><td>No.: 19 / Size: 48 Sq. Mtr.</td></tr>
+      <tr><td>3</td><td>No. and Size of Laboratories including Computer Labs (in Sq. Mtr.)</td><td>No.: 04 / Size: 56 Sq. Mtr.</td></tr>
       <!-- <tr><td>4</td><td>No. and Size of Library (in Sq. Mtr.)</td><td>No.: 01 / Size: 112 Sq. Mtr.</td></tr> -->
-      <tr><td>5</td><td>Internet Facility</td><td>Yes</td></tr>
-      <tr><td>6</td><td>No. of Girls Toilets</td><td>08</td></tr>
-      <tr><td>7</td><td>No. of Boys Toilets</td><td>08</td></tr>
+      <tr><td>4</td><td>Internet Facility</td><td>Yes</td></tr>
+      <tr><td>5</td><td>No. of Girls Toilets</td><td>06</td></tr>
+      <tr><td>6</td><td>No. of Boys Toilets</td><td>06</td></tr>
       <!-- <tr><td>8</td><td>No. of CWSN Toilets</td><td>02</td></tr> -->
-      <tr><td>9</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><a href="#">View Video</a></td></tr>
+      <tr><td>7</td><td>Link of YouTube Video of the Inspection of School covering the Infrastructure of the School</td><td><span class="blank">——</span></td></tr>
+    </tbody>
+  </table>
+
+  <!-- ══ F: TEACHER DETAILS ══ -->
+  <h2>F: Teacher Details</h2>
+  <table class="disc-table blue-head">
+    <thead>
+      <tr>
+        <th class="col-sl">S. No.</th>
+        <th>Teacher Name</th>
+        <th>Designation</th>
+        <th>Qualification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Gaurav Kumar Agarwal</td><td>Principal</td><td>BCA, MCA, B.Ed, M.Phil</td></tr>
+      <tr><td>2</td><td>Somendra Singh</td><td>Special Educator</td><td>B.Ed Sp.Edu</td></tr>
+      <tr><td>3</td><td>Chaudhary Qayam Raza</td><td>Coordinator</td><td>B.Sc, D.El.Ed, CTET, CCC</td></tr>
+      <tr><td>4</td><td>Shivani Gautam</td><td>Counselor</td><td>M.A (Psychology)</td></tr>
+      <tr><td>5</td><td>Miss Bharti Sharma</td><td>Librarian</td><td>M.Lib</td></tr>
+      <tr><td>6</td><td>Purnima Sharma</td><td>Wellness Teacher</td><td>B.Sc. (ZBC), Dialysis</td></tr>
+      <tr><td>7</td><td>Arti</td><td>Wellness Teacher</td><td>BA, ANM</td></tr>
+      <tr><td>8</td><td>Arun Prakash</td><td>PTI</td><td>B.P.Ed</td></tr>
+      <tr><td>9</td><td>Kaushal Kishor Sharma</td><td>TGT</td><td>BA, B.Ed</td></tr>
+      <tr><td>10</td><td>Pankaj Singh Kanaujiya</td><td>TGT</td><td>MA, B.Ed, CTET, TET, Polytechnic</td></tr>
+      <tr><td>11</td><td>Anjali Verma</td><td>TGT</td><td>B.Sc, B.Ed, CTET, ADCA</td></tr>
+      <tr><td>12</td><td>Ragini Devi</td><td>TGT</td><td>B.Sc, MA, B.Ed, TET, CTET</td></tr>
+      <tr><td>13</td><td>Adarsh Mishra</td><td>TGT</td><td>B.Sc, B.Ed, ADCA, CCC, TET, CTET, BSTET</td></tr>
+      <tr><td>14</td><td>Rolee Patel</td><td>TGT</td><td>B.Sc, B.Ed, D.El.Ed, TET, CTET, REET, STET, CCC</td></tr>
+      <tr><td>15</td><td>Bharti Patel</td><td>TGT</td><td>B.Sc, B.Ed</td></tr>
+      <tr><td>16</td><td>Shivani Patel</td><td>PRT</td><td>B.Sc, M.Sc, D.El.Ed, UPTET, CTET</td></tr>
+      <tr><td>17</td><td>Yashvardhini Pandey</td><td>PRT</td><td>B.Sc, M.Sc, D.El.Ed, CTET</td></tr>
+      <tr><td>18</td><td>Mamta Patel</td><td>PRT</td><td>BA, MA, BTC, CTET</td></tr>
+      <tr><td>19</td><td>Nayab Fatima</td><td>PRT</td><td>B.Sc.</td></tr>
+      <tr><td>20</td><td>Anupam Singh Yadav</td><td>PRT</td><td>B.Sc, CCC</td></tr>
+      <tr><td>21</td><td>Sarita</td><td>PRT</td><td>BA, D.El.Ed, TET, CTET</td></tr>
+      <tr><td>22</td><td>Nida Khan</td><td>PRT</td><td>BA, BFSI, CCC</td></tr>
+      <tr><td>23</td><td>Ratna</td><td>PRT</td><td>B.Sc, CCC</td></tr>
+      <tr><td>24</td><td>Payal Katiyar</td><td>PRT</td><td>B.Sc</td></tr>
+      <tr><td>25</td><td>Yashvardhini Pandey</td><td>PRT</td><td>B.Sc, M.Sc, D.El.Ed, CTET</td></tr>
+      <tr><td>26</td><td>Apoorva Kashyap</td><td>NTT</td><td>B.A, M.A, B.Ed</td></tr>
+      <tr><td>27</td><td>Anshi Patel</td><td>NTT</td><td>BA, D.El.Ed, TET, CTET</td></tr>
+      <tr><td>28</td><td>Muskan Gupta</td><td>NTT</td><td>BA, NTT, ITI, CCC</td></tr>
+      <tr><td>29</td><td>Anupam Singh Yadav</td><td>Accountant</td><td>B.Sc, CCC</td></tr>
+      <tr><td>30</td><td>Miss Sukirti</td><td>Dance Teacher</td><td>B.Sc, CCC</td></tr>
     </tbody>
   </table>
 
